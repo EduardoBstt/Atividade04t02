@@ -31,7 +31,16 @@ public class Principal {
 	// e exiba uma mensagem de boas-vindas personalizada
 	// Exemplo: "Olá João! Você tem 20 anos. Seja bem-vindo(a)!"
 	public static void questao1_Scanner(Scanner scan) {
+		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("=== QUESTÃO 1 - SCANNER ===");
+		System.out.println("Digite seu Nome: ");
+		String nome = scan.nextLine();
+		System.out.println("Digite sua Idade: ");
+		int idade = scan.nextInt();
+		
+		System.out.println("Olá " + nome +"! Você tem " + idade + " anos. Seja bem-vindo(a)!");
+		
 
 	}
 	
@@ -43,9 +52,11 @@ public class Principal {
 	// Exemplo: "5 x 1 = 5", "5 x 2 = 10", etc.
 	public static void questao2_Print() {
 		System.out.println("=== QUESTÃO 2 - PRINT ===");
-		// SEU CÓDIGO AQUI
+		int i=0;
 		
-		System.out.println();
+		for(i = 1; i <= 10; i++) {
+			System.out.println(" 5 x " + i + " = " + (5 * i));
+		}
 	}
 	
 	// ========================================
@@ -56,9 +67,14 @@ public class Principal {
 	// Resultado esperado: 5050
 	public static void questao3_For() {
 		System.out.println("=== QUESTÃO 3 - FOR ===");
-		// SEU CÓDIGO AQUI
 		
-		System.out.println();
+		int soma = 0;
+		
+		for(int i = 1; i <= 100; i++) {
+			soma += i;
+		}
+		
+		System.out.println("A Soma total é " + soma);
 	}
 	
 	// ========================================
@@ -70,8 +86,19 @@ public class Principal {
 	// - Reprovado (nota < 4): "Infelizmente você foi REPROVADO. Tente novamente!"
 	public static void questao4_If(Scanner scan) {
 		System.out.println("=== QUESTÃO 4 - IF ===");
+		
 		System.out.println("Digite sua nota (0 a 10):");
-		// SEU CÓDIGO AQUI
+		int nota = scan.nextInt();
+		
+		if( nota >= 7) {
+			System.out.println("Parabéns! Você foi APROVADO!");
+		}
+		else if(nota <= 4 || nota < 7) {
+			System.out.println("Você está em RECUPERAÇÃO. Estude mais!");
+		}
+		else if(nota < 4) {
+			System.out.println("Infelizmente você foi REPROVADO. Tente novamente!");
+		}
 		
 		System.out.println();
 	}
