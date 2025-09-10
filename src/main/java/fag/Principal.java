@@ -88,7 +88,7 @@ public class Principal {
 		System.out.println("=== QUESTÃO 4 - IF ===");
 		
 		System.out.println("Digite sua nota (0 a 10):");
-		int nota = scan.nextInt();
+		float nota = scan.nextFloat();
 		
 		if( nota >= 7) {
 			System.out.println("Parabéns! Você foi APROVADO!");
